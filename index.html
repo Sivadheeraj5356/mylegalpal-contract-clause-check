@@ -1,1 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contract Clause Check</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Contract Clause Check</h1>
+    <p class="sub">Founders sign contracts they have not fully read. Paste clauses, one per line as <code>section | &lt;clause-text&gt;</code>, and the check flags wording that commonly deserves a second look: broad indemnities, liability without a cap, auto-renewals without a notice window, perpetual IP grants, vague payment terms, and missing termination or governing-law clauses. Heuristic screen, not legal advice.</p>
+  </header>
 
+  <section class="card">
+    <label class="lbl" for="cls">Clauses, one per line: <code>section | &lt;clause-text&gt;</code></label>
+    <textarea id="cls" rows="9" spellcheck="false">Indemnity | The Client shall indemnify the Company against any and all claims, without limitation.
+Liability | Neither party shall be liable for indirect damages.
+Renewal | This agreement shall auto-renew annually unless terminated.
+IP | All work product is assigned to the Client in perpetuity, irrevocably.
+Payment | Client shall pay the fees as invoiced.
+Termination | Either party may terminate with 30 days written notice.
+Governing Law | This agreement is governed by the laws of Karnataka, India.</textarea>
+
+    <button id="run" type="button">Run clause check</button>
+  </section>
+
+  <section id="results" class="hidden">
+    <div class="card">
+      <h2>Findings <span id="stats" class="stats"></span></h2>
+      <ul id="findings" class="findings"></ul>
+    </div>
+  </section>
+
+  <footer>Plain HTML, CSS and JavaScript. No external services, build step or secrets. Tests: <code>npm test</code>. Not legal advice.</footer>
+</main>
+<script src="clauses.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
