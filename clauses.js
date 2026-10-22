@@ -24,7 +24,7 @@
     const { rows, skipped } = typeof input === 'string' ? parseLines(input) : input;
     const findings = [];
     const push = (level, code, text) => findings.push({ level, code, text });
-    const all = rows.map((r) => r.text).join('\n');
+    const all = rows.map((r) => r.section + ' ' + r.text).join('\n');
 
     rows.forEach((r) => {
       if (/indemnif/i.test(r.text) && /any and all|all claims|without limitation/i.test(r.text))
