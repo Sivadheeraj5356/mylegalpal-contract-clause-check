@@ -1,0 +1,7 @@
+{
+  "name": "mylegalpal-contract-clause-check",
+  "version": "1.0.0",
+  "description": "Heuristic contract clause review: broad indemnities, unlimited liability, auto-renewals, perpetual IP, vague payment terms, missing termination/governing-law",
+  "scripts": { "test": "node --test" },
+  "license": "MIT"
+}
